@@ -7,5 +7,5 @@ const router = express.Router();
 //define the routes for the controllers
 router.post("/register", registerUser);
 router.post("/login", loginUser);
-router.post("/getusers", getUsers);
+router.get("/getusers", getUsers);
 module.exports = router;
