@@ -3,7 +3,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
-//const cors=require("cors")
+const cors = require("cors");
 
 dotenv.config(); //to load the environment variables
 
@@ -15,7 +15,7 @@ app.use(express.json());
 connectDB();
 
 //middleware to handle the cors origin
-//app.use(cors());
+app.use(cors());
 
 //use the user routes
 app.use("/api/users", userRoutes);
